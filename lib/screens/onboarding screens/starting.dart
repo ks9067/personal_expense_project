@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:get/get.dart';
+import 'package:personal_expense/screens/Screens/signup_screen.dart';
 import 'package:personal_expense/widgets/button_widgets.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -69,7 +71,9 @@ class OnBoardingPage extends StatelessWidget {
               ),
               ButtonWidget(
                 text: "SignUp",
-                onClicked: () {},
+                onClicked: () {
+                  Get.to(SignUp());
+                },
                 color: Color(0XFF7F3DFF),
                 text1: "Login",
                 onClicked1: () {},
@@ -115,7 +119,9 @@ class OnBoardingPage extends StatelessWidget {
               ),
               ButtonWidget(
                 text: "SignUp",
-                onClicked: () {},
+                onClicked: () {
+                  Get.to(SignUp());
+                },
                 color: Color(0XFF7F3DFF),
                 text1: "Login",
                 onClicked1: () {},
@@ -161,7 +167,9 @@ class OnBoardingPage extends StatelessWidget {
               ),
               ButtonWidget(
                 text: "SignUp",
-                onClicked: () {},
+                onClicked: () {
+                  Get.to(SignUp());
+                },
                 color: Color(0XFF7F3DFF),
                 text1: "Login",
                 onClicked1: () {},

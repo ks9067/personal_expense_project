@@ -38,6 +38,9 @@ dependencies:
   flutter_native_splash: ^2.2.19
   introduction_screen: ^3.1.7
   flutter_onboarding_slider: ^1.0.9
+  get: ^4.6.5
+  google_fonts: ^4.0.3
+  hexcolor: ^3.0.1
 
 dev_dependencies:
   flutter_test:
