@@ -3,9 +3,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:personal_expense/screens/Screens/otp_screen.dart';
 
 import '../../helper/textfield_stling.dart';
 import '../../widgets/button_widgets.dart';
+import '../../widgets/custom_appbar.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -32,17 +34,7 @@ class _SignUpState extends State<SignUp> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        elevation: 0,
-        centerTitle: true,
-        title: Text("Sign Up",
-            style: GoogleFonts.inter(
-                color: Colors.black,
-                fontWeight: FontWeight.w600,
-                fontSize: 16)),
-        backgroundColor: Colors.grey[50],
-      ),
+      appBar: Appbar('Sign Up'),
       body: SingleChildScrollView(
         child: Container(
           child: Padding(
@@ -61,6 +53,7 @@ class _SignUpState extends State<SignUp> {
                       child: TextField(
                         decoration: ThemeHelper().textInputDecoration(
                             'Name', 'Enter your user name'),
+                        style: TextStyle(fontSize: 17),
                       ),
                       decoration: ThemeHelper().inputBoxDecorationShaddow(),
                     ),
@@ -71,6 +64,7 @@ class _SignUpState extends State<SignUp> {
                       child: TextField(
                         decoration:
                             ThemeHelper().textInputDecoration('Email', ''),
+                        style: TextStyle(fontSize: 17),
                       ),
                       decoration: ThemeHelper().inputBoxDecorationShaddow(),
                     ),
@@ -82,6 +76,7 @@ class _SignUpState extends State<SignUp> {
                         obscureText: true,
                         decoration: ThemeHelper().textInputDecoration(
                             'Password', 'Enter your password'),
+                        style: TextStyle(fontSize: 17),
                       ),
                       decoration: ThemeHelper().inputBoxDecorationShaddow(),
                     ),
@@ -118,7 +113,9 @@ class _SignUpState extends State<SignUp> {
                       Container(
                         width: 343,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(OtpScreen());
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0XFF7F3DFF),
                             shape: RoundedRectangleBorder(
@@ -189,13 +186,13 @@ class _SignUpState extends State<SignUp> {
                       child: Text.rich(
                         TextSpan(
                           children: [
-                            TextSpan(text: 
-                                "Already have an account? ",
-                                style: GoogleFonts.inter(
-                                    color: Color(0XFF91919F),
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14),
-                              ),
+                            TextSpan(
+                              text: "Already have an account? ",
+                              style: GoogleFonts.inter(
+                                  color: Color(0XFF91919F),
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14),
+                            ),
                             TextSpan(
                               text: 'Login',
                               /* recognizer: TapGestureRecognizer()

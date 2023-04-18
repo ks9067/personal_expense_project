@@ -6,10 +6,11 @@ class ThemeHelper{
   InputDecoration textInputDecoration([String lableText="", String hintText = ""]){
     return InputDecoration(
       labelText: lableText,
-      //hintText: hintText,
+      floatingLabelBehavior: FloatingLabelBehavior.never,
+      //hintText: hintText,      
       fillColor: Colors.white,
       filled: true,
-      contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+      contentPadding: EdgeInsets.fromLTRB(20, 20, 20, 20),
       focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16.0), borderSide: BorderSide(color: Color(0XFF91919F))),
       enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16.0), borderSide: BorderSide(color: Colors.grey.shade400)),
       errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(16.0), borderSide: BorderSide(color: Colors.red, width: 2.0)),
@@ -22,6 +23,7 @@ class ThemeHelper{
       BoxShadow(  
         color: Colors.grey.withOpacity(0),
         blurRadius: 20,
+
         offset: const Offset(0, 5),
       )
     ]);
