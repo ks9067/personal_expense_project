@@ -19,6 +19,7 @@ class OnBoardingPage extends StatelessWidget {
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
       background: [
+         
         Image.asset(
           'assets/images/2ndpage.png',
           height: 400,
@@ -36,6 +37,7 @@ class OnBoardingPage extends StatelessWidget {
       pageBodies: [
         Container(
           alignment: Alignment.center,
+          height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
@@ -43,7 +45,7 @@ class OnBoardingPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               const SizedBox(
-                height: 400,
+                height: 340,
               ),
               Text(
                 'Gain total control of your money',
@@ -67,7 +69,55 @@ class OnBoardingPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 60,
+                height: 45,
+              ),
+              ButtonWidget(
+                text: "SignUp",
+                onClicked: () {
+                  Get.to(SignUp());
+                },
+                color: Color(0XFF7F3DFF),
+                text1: "Login",
+                onClicked1: () {},
+                color1: Color(0XFFEEE5FF),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          width: MediaQuery.of(context).size.width,
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              const SizedBox(
+                height: 360,
+              ),
+              Text(
+                'Know where your money goes',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: kDarkBlueColor,
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(
+                height: 17,
+              ),
+              const Text(
+                'Track your transaction easily, with categories and financial report ',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black26,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(
+                height: 35,
               ),
               ButtonWidget(
                 text: "SignUp",
@@ -94,54 +144,6 @@ class OnBoardingPage extends StatelessWidget {
                 height: 400,
               ),
               Text(
-                'Know where your money goes',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kDarkBlueColor,
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              const SizedBox(
-                height: 17,
-              ),
-              const Text(
-                'Track your transaction easily, with categories and financial report ',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black26,
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              SizedBox(
-                height: 60,
-              ),
-              ButtonWidget(
-                text: "SignUp",
-                onClicked: () {
-                  Get.to(SignUp());
-                },
-                color: Color(0XFF7F3DFF),
-                text1: "Login",
-                onClicked1: () {},
-                color1: Color(0XFFEEE5FF),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: MediaQuery.of(context).size.width,
-          padding: const EdgeInsets.symmetric(horizontal: 40),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              const SizedBox(
-                height: 430,
-              ),
-              Text(
                 'Planning ahead',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -163,7 +165,7 @@ class OnBoardingPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 90,
+                height: 40,
               ),
               ButtonWidget(
                 text: "SignUp",
